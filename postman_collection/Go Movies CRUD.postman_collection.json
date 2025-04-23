@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "8640d23c-22c5-4727-be72-f64e4cf66421",
+		"name": "Go Movies CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43236001"
+	},
+	"item": [
+		{
+			"name": "Get all Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all Movies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 11:28:55 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "310"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"1\",\n        \"isbn\": \"438222\",\n        \"title\": \"Movie One\",\n        \"director\": {\n            \"firstname\": \"John\",\n            \"lastname\": \"Doe\"\n        }\n    },\n    {\n        \"id\": \"78579428\",\n        \"isbn\": \"438444\",\n        \"title\": \"Movie Three\",\n        \"director\": {\n            \"firstname\": \"Jane\",\n            \"lastname\": \"Doe\"\n        }\n    },\n    {\n        \"id\": \"50660084\",\n        \"isbn\": \"438333\",\n        \"title\": \"Movie Two\",\n        \"director\": {\n            \"firstname\": \"Mandeep\",\n            \"lastname\": \"Kaur\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Movie By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Movie By ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movies/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 11:29:14 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "96"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"1\",\n    \"isbn\": \"438222\",\n    \"title\": \"Movie One\",\n    \"director\": {\n        \"firstname\": \"John\",\n        \"lastname\": \"Doe\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create a Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\": \"438444\",\r\n    \"title\": \"Movie Three\",\r\n    \"director\": {\r\n        \"firstname\": \"Jane\",\r\n        \"lastname\": \"Doe\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create a Movie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isbn\": \"438444\",\r\n    \"title\": \"Movie Three\",\r\n    \"director\": {\r\n        \"firstname\": \"Jane\",\r\n        \"lastname\": \"Doe\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 11:29:27 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "105"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"93914862\",\n    \"isbn\": \"438444\",\n    \"title\": \"Movie Three\",\n    \"director\": {\n        \"firstname\": \"Jane\",\n        \"lastname\": \"Doe\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update a Movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\": \"438333\",\r\n    \"title\": \"Movie Two\",\r\n    \"director\": {\r\n        \"firstname\": \"Mandeep\",\r\n        \"lastname\": \"Kaur\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/movies/50660084",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"50660084"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update a Movie",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isbn\": \"438333\",\r\n    \"title\": \"Movie Two\",\r\n    \"director\": {\r\n        \"firstname\": \"Mandeep\",\r\n        \"lastname\": \"Kaur\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies/50660084",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"50660084"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 11:29:41 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "107"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"50660084\",\n    \"isbn\": \"438333\",\n    \"title\": \"Movie Two\",\n    \"director\": {\n        \"firstname\": \"Mandeep\",\n        \"lastname\": \"Kaur\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete a Movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/movies/93914862",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"93914862"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete a Movie",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/movies/93914862",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"93914862"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 11:29:54 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "310"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"1\",\n        \"isbn\": \"438222\",\n        \"title\": \"Movie One\",\n        \"director\": {\n            \"firstname\": \"John\",\n            \"lastname\": \"Doe\"\n        }\n    },\n    {\n        \"id\": \"78579428\",\n        \"isbn\": \"438444\",\n        \"title\": \"Movie Three\",\n        \"director\": {\n            \"firstname\": \"Jane\",\n            \"lastname\": \"Doe\"\n        }\n    },\n    {\n        \"id\": \"50660084\",\n        \"isbn\": \"438333\",\n        \"title\": \"Movie Two\",\n        \"director\": {\n            \"firstname\": \"Mandeep\",\n            \"lastname\": \"Kaur\"\n        }\n    }\n]"
+				}
+			]
+		}
+	]
+}

@@ -110,7 +110,7 @@ func main() {
 	r.HandleFunc("/movies/{id}", updateMovie).Methods("PUT")
 	r.HandleFunc("/movies/{id}", deleteMovie).Methods("DELETE")
 
-	fmt.Println("Server starting at port: 8000")
+	fmt.Println("Server starting at port: 8080")
 
 	err := http.ListenAndServe(":8080", r)
 	if err != nil {
